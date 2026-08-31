@@ -1,0 +1,7 @@
+std = "roblox"
+
+allow_defined_top_level = true
+unused_variable = "warn"
+unused_local = "warn"
+shadowing = "warn"
+global_usage = "warn"

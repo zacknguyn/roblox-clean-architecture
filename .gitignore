@@ -1,0 +1,29 @@
+# Build artifacts
+*.rbxl
+*.rbxlx
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+*.temp
+
+# Node (for CLI development)
+node_modules/
+*.tsbuildinfo
+
+# Wally
+.wally/
+Packages/
+
+# Rokit
+.rokit/
