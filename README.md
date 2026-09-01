@@ -52,8 +52,12 @@ Most Roblox projects suffer from:
    ```
 3. Bootstrap:
    ```bash
-   ./scripts/init.sh
+   # macOS / Linux / Git Bash
+   bash scripts/init.sh
    # → rokit install, wally install, rojo build, selene, stylua
+
+   # Windows PowerShell
+   powershell -ExecutionPolicy Bypass -File scripts/init.ps1
    ```
 4. Open `place.rbxlx` in Studio or run `rojo serve`
 
@@ -62,7 +66,7 @@ Most Roblox projects suffer from:
 ```bash
 git clone https://github.com/zacknguyn/roblox-clean-architecture MyGame
 cd MyGame
-./scripts/init.sh
+bash scripts/init.sh          # or powershell -File scripts/init.ps1 on Windows
 ```
 
 ---
@@ -265,31 +269,31 @@ end)
 ## Project Structure Reference
 
 ```
-roblox-clean-architecture/
+roblox-clean-architecture/   ← IS the template (Use this template)
 ├── LICENSE
 ├── README.md
-├── SKILL.md                      # Universal AI agent instructions
+├── SKILL.md                 # Universal AI agent instructions
+├── .gitattributes
 ├── .gitignore
-└── template/                     # GitHub template source
-    ├── SKILL.md                  # Copied to every new project
-    ├── scripts/init.sh           # One-command bootstrap
-    ├── .github/workflows/ci.yml  # CI: selene + stylua + rojo build
-    ├── rokit.toml                # Tool versions
-    ├── wally.toml                # Wally packages
-    ├── selene.toml               # Linter config + plugin
-    ├── stylua.toml               # Formatter config
-    ├── default.project.json      # Rojo project mapping
-    └── src/
-        ├── shared/
-        │   ├── Configs/GameConfig.luau
-        │   ├── Networking/Remotes.luau
-        │   └── Modules/
-        ├── server/
-        │   ├── Services/ExampleService/{init.luau, Config.luau}
-        │   └── init.server.luau
-        └── client/
-            ├── Services/ExampleClientService/init.luau
-            └── init.client.luau
+├── scripts/
+│   ├── init.sh              # macOS/Linux/Git Bash
+│   └── init.ps1             # Windows PowerShell
+├── rokit.toml               # Tool versions
+├── wally.toml
+├── selene.toml
+├── stylua.toml
+├── default.project.json     # Rojo project mapping
+└── src/
+    ├── shared/
+    │   ├── Configs/GameConfig.luau
+    │   ├── Networking/Remotes.luau
+    │   └── Modules/
+    ├── server/
+    │   ├── Services/ExampleService/{init.luau, Config.luau}
+    │   └── init.server.luau
+    └── client/
+        ├── Services/ExampleClientService/init.luau
+        └── init.client.luau
 ```
 
 ---
